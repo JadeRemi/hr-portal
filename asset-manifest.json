@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.f1a14acd.chunk.css",
-    "main.js": "./static/js/main.9c1c429e.chunk.js",
-    "main.js.map": "./static/js/main.9c1c429e.chunk.js.map",
+    "main.js": "./static/js/main.43675168.chunk.js",
+    "main.js.map": "./static/js/main.43675168.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.83099e01.js",
     "runtime-main.js.map": "./static/js/runtime-main.83099e01.js.map",
     "static/js/2.b9016e5a.chunk.js": "./static/js/2.b9016e5a.chunk.js",
@@ -15,12 +15,29 @@
     "static/media/App.scss": "./static/media/announce-background.9f29a6f1.svg",
     "static/media/announce-about.a9e438a2.svg": "./static/media/announce-about.a9e438a2.svg",
     "static/media/announce-handshake.336117ab.svg": "./static/media/announce-handshake.336117ab.svg",
-    "static/media/itexpert-logo-blue.8c356a34.svg": "./static/media/itexpert-logo-blue.8c356a34.svg"
+    "static/media/icon-arrow.c60ebf7e.svg": "./static/media/icon-arrow.c60ebf7e.svg",
+    "static/media/icon-care.b923b1f1.svg": "./static/media/icon-care.b923b1f1.svg",
+    "static/media/icon-chevron.92174047.svg": "./static/media/icon-chevron.92174047.svg",
+    "static/media/icon-clip.2458b1c6.svg": "./static/media/icon-clip.2458b1c6.svg",
+    "static/media/icon-clock.ef7b9469.svg": "./static/media/icon-clock.ef7b9469.svg",
+    "static/media/icon-done.ed6dd815.svg": "./static/media/icon-done.ed6dd815.svg",
+    "static/media/icon-eye.70ee48f1.svg": "./static/media/icon-eye.70ee48f1.svg",
+    "static/media/icon-like.911e6561.svg": "./static/media/icon-like.911e6561.svg",
+    "static/media/icon-note.8f1c776a.svg": "./static/media/icon-note.8f1c776a.svg",
+    "static/media/icon-smile.e0488436.svg": "./static/media/icon-smile.e0488436.svg",
+    "static/media/icon-star.b91b77df.svg": "./static/media/icon-star.b91b77df.svg",
+    "static/media/icon-wait.f520714f.svg": "./static/media/icon-wait.f520714f.svg",
+    "static/media/itexpert-logo-black.2572d272.svg": "./static/media/itexpert-logo-black.2572d272.svg",
+    "static/media/itexpert-logo-blue.8c356a34.svg": "./static/media/itexpert-logo-blue.8c356a34.svg",
+    "static/media/logo-facebook.d431b631.svg": "./static/media/logo-facebook.d431b631.svg",
+    "static/media/logo-twitter.0d2bbc4c.svg": "./static/media/logo-twitter.0d2bbc4c.svg",
+    "static/media/logo-youtube.04716a7a.svg": "./static/media/logo-youtube.04716a7a.svg",
+    "static/media/vacancies-hand.32d86cc4.svg": "./static/media/vacancies-hand.32d86cc4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.83099e01.js",
     "static/js/2.b9016e5a.chunk.js",
     "static/css/main.f1a14acd.chunk.css",
-    "static/js/main.9c1c429e.chunk.js"
+    "static/js/main.43675168.chunk.js"
   ]
 }
