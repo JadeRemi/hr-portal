@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faYoutube, faTwitter, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import imgLogoBlue from "../../assets/images/itexpert-logo-blue.svg";
+
 
 interface Model {
     data: {
@@ -21,7 +23,7 @@ export function Footer({ data }: Model) {
         <div className="footer">
             <div className="footer-wrapper">
                 <div className="footer-column footer-column-logo">
-                    <img className="footer-logo" src="/img/itexpert-logo-blue.svg" alt="logo" />
+                    <img className="footer-logo" src={imgLogoBlue} alt="logo" />
                     <p>{data.Rights1}</p>
                     <p>{data.Rights2}</p>
                 </div>

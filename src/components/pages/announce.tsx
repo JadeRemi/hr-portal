@@ -1,4 +1,5 @@
-//import imgHandshake from "/img/announce-handshake.svg"
+import imgHandshake from "../../assets/images/announce-handshake.svg";
+import imgAbout from "../../assets/images/announce-about.svg";
 
 interface Model {
     data: {
@@ -17,10 +18,9 @@ export function Announce({ data }: Model) {
                         <p>{data.Paragraph2}</p>
                     </div>
                 </div>
-                {/*"/img/announce-handshake.svg"*/}
-                <img className="presentation-about-img" src="/img/announce-about.svg" alt="handshake" />
+                <img className="presentation-about-img" src={imgAbout} alt="about" />
                 <div className="presentation-banner">
-                    <img src="/img/announce-handshake.svg" alt="handshake" />
+                    <img src={imgHandshake} alt="handshake" />
                     <h1>{data.BannerHeading}</h1>
                     <p className="banner-text">{data.BannerText}</p>
                     <button className="button-blue" id="buttonConfirmAnnounce"><p>{data.BannerButton}</p></button>
