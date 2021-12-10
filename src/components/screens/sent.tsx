@@ -1,3 +1,4 @@
+import imgIconDone from "../../assets/images/icon-done.svg";
 
 interface Model {
     data: {
@@ -9,7 +10,7 @@ interface Model {
 export function Sent({ data, onClose }: Model) {
     return (
         <div className="sent">
-            <img src="/img/icon-done.svg" alt="done" />
+            <img src={imgIconDone} alt="done" />
             <h1>{data.Heading}</h1>
             <p>{data.Paragraph1}</p>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import imgIconArrow from "../../assets/images/icon-arrow.svg";
 
 const DAYS_IN_WEEK = 7;
 const DAYS_IN_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -89,7 +90,7 @@ export function Calendar () {
     const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
     const weekDayNames = ['Пн', 'Вт', 'Ср', 'Чт' , 'Пт', 'Сб', 'Вс']
     const monthData = getMonthData(date.getFullYear(), date.getMonth());
-    
+
 //<button onClick={handlePrevMonthButtonClick}>{'<'}</button>
 //<button onClick={handleNextMonthButtonClick}>{'>'}</button>
     return (
@@ -97,7 +98,7 @@ export function Calendar () {
             <p className="hidden">{date && <p>Выбранная дата: {date.toLocaleDateString()}</p>}</p>
             <header>
                 
-                <img className="arrow-select-left" src="/img/icon-arrow.svg" alt="arrow" onClick={handlePrevMonthButtonClick} />
+                <img className="arrow-select-left" src={imgIconArrow} alt="arrow" onClick={handlePrevMonthButtonClick} />
                 <h3>{monthNames[date.getMonth()]}</h3>
                 
                 <select
@@ -121,7 +122,7 @@ export function Calendar () {
                         <option key={year} value={year}>{year}</option> 
                     )}
                     </select>
-                <img className="arrow-select-right" src="/img/icon-arrow.svg" alt="arrow" onClick={handleNextMonthButtonClick} />
+                <img className="arrow-select-right" src={imgIconArrow} alt="arrow" onClick={handleNextMonthButtonClick} />
                 
             </header>
             <table>

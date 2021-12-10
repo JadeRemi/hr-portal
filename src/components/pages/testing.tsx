@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import imgIconClip from "../../assets/images/icon-clip.svg";
+import imgIconChevron from "../../assets/images/icon-chevron.svg";
 
 interface Model {
     data: {
@@ -118,7 +120,7 @@ export function Testing({ data, openModal }: Model) {
                                         <input name="select_value" type="hidden" id="selectedValue" value={selectedValue} />
                                         <div className="display-value" id="displayValue" onClick={toggleOptions}>
                                             <p className="value-text" id="valueText">{dropoption?dropoption:data.InputCvPlaceholder}</p>
-                                            <img className="footer-logo" src="/img/icon-chevron.svg" alt="arrow" />
+                                            <img className="footer-logo" src={imgIconChevron} alt="arrow" />
                                         </div>
                                         <ul tabIndex={0} className={"select-container " + (!!dropdown ? "" : "hidden") } id="selectContainer" ref={container}>
                                             {cvs.map((item, i) => {
@@ -129,7 +131,7 @@ export function Testing({ data, openModal }: Model) {
                                 </div>
                                 <div className="testing-form-item testing-form-file">
                                     <label htmlFor="inputEmailFile" className="testing-file upload-file">
-                                        <img src="/img/icon-clip.svg" alt="add" />
+                                        <img src={imgIconClip} alt="add" />
                                         <p>{data.ButtonUpload}</p>
                                         <input placeholder={data.InputPlaceholder} id="inputEmailFile" type="file" />
                                     </label>

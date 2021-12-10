@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import imgIconChevron from "../../assets/images/icon-chevron.svg";
 
 interface Model {
     placeholder: string|null;
@@ -46,7 +47,7 @@ export function Dropdown({ placeholder, data }: Model) {
             <input name="select_value" type="hidden" id="selectedValue" value={selectedValue} />
             <div className="display-value" id="displayValue" onClick={toggleOptions}>
                 <p className="value-text" id="valueText">{dropoption?dropoption:placeholderName}</p>
-                <img className="footer-logo" src="/img/icon-chevron.svg" alt="arrow" />
+                <img className="footer-logo" src={imgIconChevron} alt="arrow" />
             </div>
             <ul tabIndex={0} className={"select-container " + (!!dropdown ? "" : "hidden") } id="selectContainer" ref={container}>
                 {options.map((item, i) => {

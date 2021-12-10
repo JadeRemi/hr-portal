@@ -1,5 +1,9 @@
 import imgHandshake from "../../assets/images/announce-handshake.svg";
 import imgAbout from "../../assets/images/announce-about.svg";
+import imgIconCare from "../../assets/images/icon-care.svg";
+import imgIconLike from "../../assets/images/icon-like.svg";
+import imgIconStar from "../../assets/images/icon-star.svg";
+import imgIconSmile from "../../assets/images/icon-smile.svg";
 
 interface Model {
     data: {
@@ -30,22 +34,22 @@ export function Announce({ data }: Model) {
             <div className="pros">
                 <div className="pros-wrapper">
                     <div className="pros-column">
-                        <img src="/img/icon-care.svg" alt="care" />
+                        <img src={imgIconCare} alt="care" />
                         <h1>{data.Column1Title}</h1>
                         <p>{data.Column1Text}</p>
                     </div>
                     <div className="pros-column">
-                        <img src="/img/icon-like.svg" alt="like" />
+                        <img src={imgIconLike} alt="like" />
                         <h1>{data.Column2Title}</h1>
                         <p>{data.Column2Text}</p>
                     </div>
                     <div className="pros-column">
-                        <img src="/img/icon-star.svg" alt="star" />
+                        <img src={imgIconStar} alt="star" />
                         <h1>{data.Column3Title}</h1>
                         <p>{data.Column3Text}</p>
                     </div>
                     <div className="pros-column">
-                        <img src="/img/icon-smile.svg" alt="smile" />
+                        <img src={imgIconSmile} alt="smile" />
                         <h1>{data.Column4Title}</h1>
                         <p>{data.Column4Text}</p>
                     </div>

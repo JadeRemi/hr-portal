@@ -1,4 +1,6 @@
 import { useState, MouseEvent } from 'react';
+import imgLogoBlack from "../../assets/images/itexpert-logo-black.svg";
+import imgIconArrow from "../../assets/images/icon-arrow.svg";
 
 interface Model{
     data: {
@@ -20,12 +22,12 @@ export function Header({ data }: Model) {
         <div className="header">
             <div className="header-wrapper">
                 <div className="logotype">
-                    <img src="/img/itexpert-logo-black.svg" alt="logo" />
+                    <img src={imgLogoBlack} alt="logo" />
                     <h3>{data[0].Heading}</h3>
                 </div>
                 <div className="language" onClick={switchLang}>
                     <p>{languages[lang]}</p>
-                    <img src="/img/icon-arrow.svg" alt="arrow" />
+                    <img src={imgIconArrow} alt="arrow" />
                 </div>
             </div>
         </div>

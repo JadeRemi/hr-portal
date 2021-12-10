@@ -2,6 +2,11 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faYoutube, faTwitter, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import imgLogoBlue from "../../assets/images/itexpert-logo-blue.svg";
+import imgLogoTwitter from "../../assets/images/logo-twitter.svg";
+import imgLogoFacebook from "../../assets/images/logo-facebook.svg";
+import imgLogoYoutube from "../../assets/images/logo-youtube.svg";
+import imgIconArrow from "../../assets/images/icon-arrow.svg";
+
 
 
 interface Model {
@@ -38,7 +43,7 @@ export function Footer({ data }: Model) {
                     <h3>{data.CallMe}</h3>
                     <form className="footer-form">
                         <div className="input-icons">
-                            <img src="/img/icon-arrow.svg" alt="arrow" />
+                            <img src={imgIconArrow} alt="arrow" />
                         </div>
                         <input className="footer-input" type="text" placeholder="+7(___)___-__-__" />
                         <div>
@@ -55,12 +60,11 @@ export function Footer({ data }: Model) {
                     </form>
                 </div>
                 <div className="footer-column footer-column-socials">
-                    <img src="/img/logo-twitter.svg" alt="logo" />
-                    <img src="/img/logo-facebook.svg" alt="logo" />
-                    <img src="/img/logo-youtube.svg" alt="logo" />
+                    <img src={imgLogoTwitter} alt="logo" />
+                    <img src={imgLogoFacebook} alt="logo" />
+                    <img src={imgLogoYoutube} alt="logo" />
                 </div>
             </div>
         </div>
     );
 };
-

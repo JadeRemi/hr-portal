@@ -1,4 +1,5 @@
 import { isArrayLiteralExpression } from "typescript";
+import imgVacanciesHand from "../../assets/images/vacancies-hand.svg";
 
 interface Model {
     data: {
@@ -54,7 +55,7 @@ export function Position({ data }: Model) {
                         <ul>
                             {listItems(data.BannerList)}
                         </ul>
-                        <img src="/img/vacancies-hand.svg" alt="vacancies" />
+                        <img src={imgVacanciesHand} alt="vacancies" />
                     </div>
                 </div>
             </div>

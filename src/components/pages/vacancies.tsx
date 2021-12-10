@@ -1,3 +1,7 @@
+import imgVacanciesHand from "../../assets/images/vacancies-hand.svg";
+import imgIconEye from "../../assets/images/icon-eye.svg";
+import imgIconNote from "../../assets/images/icon-note.svg";
+import imgIconClock from "../../assets/images/icon-clock.svg";
 
 interface Model {
     data: {
@@ -21,7 +25,7 @@ export function Vacancies({ data, openModal }: Model) {
                             {listItems(data.Positions)}
                         </ul>
                     </div>
-                    <img src="/img/vacancies-hand.svg" alt="vacancies" />
+                    <img src={imgVacanciesHand} alt="vacancies" />
                 </div>
                 <div className="vacancies-plan">
                     <div className="vacancies-plan-greeting">
@@ -30,15 +34,15 @@ export function Vacancies({ data, openModal }: Model) {
                     </div>
                     <div className="vacancies-steps">
                         <div className="vacancies-column">
-                            <img src="/img/icon-eye.svg" alt="icon" />
+                            <img src={imgIconEye} alt="icon" />
                             <p><span>1. </span>{data.Step1}</p>
                         </div>
                         <div className="vacancies-column">
-                            <img src="/img/icon-note.svg" alt="icon" />
+                            <img src={imgIconNote} alt="icon" />
                             <p><span>2. </span>{data.Step2}</p>
                         </div>
                         <div className="vacancies-column">
-                            <img src="/img/icon-clock.svg" alt="icon" />
+                            <img src={imgIconClock} alt="icon" />
                             <p><span>3. </span>{data.Step3}</p>
                         </div>
                     </div>
