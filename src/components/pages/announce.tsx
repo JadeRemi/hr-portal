@@ -1,3 +1,4 @@
+//import imgHandshake from "/img/announce-handshake.svg"
 
 interface Model {
     data: {
@@ -16,6 +17,7 @@ export function Announce({ data }: Model) {
                         <p>{data.Paragraph2}</p>
                     </div>
                 </div>
+                {/*"/img/announce-handshake.svg"*/}
                 <img className="presentation-about-img" src="/img/announce-about.svg" alt="handshake" />
                 <div className="presentation-banner">
                     <img src="/img/announce-handshake.svg" alt="handshake" />
