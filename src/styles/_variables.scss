@@ -1,0 +1,148 @@
+$color-white: #FFF;
+
+$color-gray-0: #EDF2F3;
+$color-gray-1: #C7D6D9;
+$color-gray-2: #92ADB3;
+$color-gray-3: #5E7073;
+$color-gray-4: #3F4B4D;
+
+$color-blue-1: #6EC0CC;
+$color-blue-2: #539099;
+$color-blue-3: #457980;
+
+$color-red: #FC5755;
+$color-filled-blue: #E5F4F6;
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: Commissioner;
+    src: url("../assets/fonts/Commissioner/Commissioner-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+
+//@font-face {
+//    font-family: CommissionerBold;
+//    src: local('CommissionerBold'), local('Commissioner-Bold'), url('../fonts/Commissioner/Commissioner-Bold.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: CommissionerMedium;
+//    src: local('CommissionerMedium'), local('Commissioner-Medium'), url('../fonts/Commissioner/Commissioner-Medium.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: CommissionerRegular;
+//    src: local('CommissionerRegular'), local('Commissioner-Regular'), url('../fonts/Commissioner/Commissioner-Regular.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//
+//@font-face {
+//    font-family: MonsterratSemibold;
+//    src: local('MonsterratSemibold'), local('Monsterrat-Semibold'), url('../fonts/Monsterrat/Monsterrat-Semibold.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: MonsterratMedium;
+//    src: local('MonsterratMedium'), local('Monsterrat-Medium'), url('../fonts/Monsterrat/Monsterrat-Semibold.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: MonsterratRegular;
+//    src: local('MonsterratRegular'), local('Monsterrat-Regular'), url('../fonts/Monsterrat/Monsterrat-Semibold.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+
+%typo-comm-p-14{
+  font-family: Commissioner;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+%typo-comm-p-16{
+  font-family: Commissioner;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+%typo-comm-p-20{
+  font-family: Commissioner;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+%typo-mons-h-16{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+%typo-mons-h-20{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+%typo-mons-h-24{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+%typo-mons-h-32{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+%svg-to-gray-2{
+  filter: brightness(0) saturate(100%) invert(82%) sepia(20%) saturate(284%) hue-rotate(144deg) brightness(82%) contrast(80%);
+}
+%svg-to-gray-1{
+  filter: brightness(0) saturate(100%) invert(84%) sepia(2%) saturate(897%) hue-rotate(142deg) brightness(100%) contrast(96%);
+}
+%svg-to-blue-1{
+  filter: brightness(0) saturate(100%) invert(91%) sepia(68%) saturate(2781%) hue-rotate(157deg) brightness(84%) contrast(85%);
+}
+%svg-to-white{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(257deg) brightness(105%) contrast(101%);
+}
+
+@mixin placehold($color){
+  &::placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}

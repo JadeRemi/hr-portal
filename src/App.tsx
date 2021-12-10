@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, ReactElement, useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
+import './App.scss';
+import JsonData from "./data/data.json";
 
-function App() {
+import { Footer } from "./components/footer/footer";
+import { Main } from "./components/main/main";
+import { Header } from "./components/header/header";
+
+
+//interface JsonRead {
+//  Header: object
+//}
+
+const App = () => {
+  const [pageData, setPageData] = useState(JsonData[0]);
+
+  //useEffect(() => {
+  //  //setPageData(JsonData[0]);
+  //}, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header data={[pageData.Header, pageData.Languages]} />
+      <Main data={pageData} />
+      <div id="modal"></div>
+      <Footer data={pageData.Footer} />
     </div>
   );
-}
+};
 
 export default App;
