@@ -56,7 +56,7 @@ const getMonthData = (year, month) => {
 }
 
 
-export function Calendar () {
+export function Calendar ({time}) {
 
     const [date, setDate] = useState(new Date());
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -84,6 +84,7 @@ export function Calendar () {
 
     const handleDayClick = newdate => {
         setDate(newdate);
+        time(date);
     };
 
     const years = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]

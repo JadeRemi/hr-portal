@@ -1,6 +1,7 @@
-//import { useState } from 'react';
+import { useState } from 'react';
 import { Calendar } from '../screens/calendar.js';
 import { Dropdown } from '../screens/dropdown';
+import contactApi from "../functions/api";
 
 interface Model {
     data: {
@@ -11,6 +12,22 @@ interface Model {
 export function Schedule({ data }: Model) {
 
     const timeSlots = [10, 12, 14, 16];
+    const [form, setForm] = useState({});
+
+    const collectSchedule = () => {
+        contactApi({"Context": "Schedule", ...form});
+    }
+
+    const patchForm = (param: string, value: string) => {
+        setForm(form => {
+            let result:any = Object.assign({...form}, {[`${param}`]: value});
+            return result;
+          })
+    }
+
+    const selectTime = (date: any) => {
+        patchForm("Time", date.toString());
+    }
 
     return (
         <div className="main-page schedule">
@@ -20,13 +37,18 @@ export function Schedule({ data }: Model) {
                     <div className="schedule-calendar">
 
                         <label className="schedule-input">{data.SelectDay}</label>
-                        <Calendar />
+                        <Calendar time={selectTime}/>
                         <div className="schedule-interactive">
                             <div className="schedule-interactive-item-1">
                                 <label className="schedule-input">{data.SelectTime}</label>
                                 <form className="schedule-timepick">
                                     {timeSlots.map((item, i) => { 
-                                        return <label htmlFor={"timepick-"+item}>{`${data.From} ${item} ${data.Until} ${item+2}`}<input type="radio" id={"timepick-"+item} name="timepick" /></label>
+                                        return (
+                                            <div className="timepick-item">
+                                                <input type="radio" id={"timepick-"+item} name="timepick" />
+                                                <label htmlFor={"timepick-"+item}>{`${data.From} ${item} ${data.Until} ${item+2}`}</label>
+                                            </div>
+                                        )
                                     })}
                                 </form>
                             </div>
@@ -45,17 +67,17 @@ export function Schedule({ data }: Model) {
                     </div>
                     <div className="schedule-form">
                         <label className="schedule-input">{data.InputNameLabel}<span>*</span></label>
-                        <input placeholder={data.InputNamePlaceholder} id="inputScheduleName" type="text" />
+                        <input placeholder={data.InputNamePlaceholder} id="inputScheduleName" type="text" onChange={(e)=>patchForm("Name", e.target.value)} />
                         <label className="schedule-input">{data.InputMessengersLabel} <strong>Skype</strong>:</label>
-                        <input placeholder={data.InputSkypePlaceholder} id="inputScheduleSkype" type="text" />
+                        <input placeholder={data.InputSkypePlaceholder} id="inputScheduleSkype" type="text" onChange={(e)=>patchForm("Skype", e.target.value)} />
                         <label className="schedule-input">{data.InputMessengersLabel} <strong>Zoom</strong>:</label>
-                        <input placeholder={data.InputZoomPlaceholder} id="inputScheduleZoom" type="text" />
+                        <input placeholder={data.InputZoomPlaceholder} id="inputScheduleZoom" type="text" onChange={(e)=>patchForm("Zoom", e.target.value)} />
                         <label className="schedule-input">{data.InputOthersLabel}</label>
-                        <input placeholder={data.InputOthersPlaceholder} id="inputScheduleOthers" type="text" />    
+                        <input placeholder={data.InputOthersPlaceholder} id="inputScheduleOthers" type="text" onChange={(e)=>patchForm("Other", e.target.value)} />    
                     </div>
                 </div>
                 <div className="button-block">
-				    <button className="button-blue" id="buttonConfirmDate"><p>{data.Button}</p></button>
+				    <button className="button-blue" id="buttonConfirmDate" onClick={()=>collectSchedule()}><p>{data.Button}</p></button>
                 </div>
             </div>
         </div>

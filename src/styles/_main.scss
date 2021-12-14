@@ -695,24 +695,46 @@ body {
         gap: 2px;
         margin-bottom: 25px;
         margin-top: 9px;
-        label{
-            display: block;
+        input[type=radio]:checked + label {
+            background-color: $color-blue-1;
+            color: $color-white;
+            border: 2px solid $color-blue-2;
+            box-sizing: border-box;
+            padding-top: 14px;
+        }
+        .timepick-item{
             box-sizing: border-box;
             text-align: center;
             flex-basis: 25%;
+            height: 58px;
+            white-space: nowrap;
+            overflow: hidden;
+            input[type=radio]{
+                appearance: none;
+                -webkit-appearance: none;
+                position: absolute;
+                display: none;
+                visibility: hidden;
+            }
+        }
+        label{
+            cursor: pointer;
+            display: block;
             height: 58px;
             padding: 16px 25px;
             @extend %typo-comm-p-20;
             background-color: $color-gray-0;
             color: $color-gray-3;
-            white-space: nowrap;
-            overflow: hidden;
             &:hover{
                 background-color: $color-blue-1;
                 color: $color-white;
             }
             input{
-                display: none;
+                //display: none;
+                //visibility: hidden;
+                appearance: none;
+                -webkit-appearance: none;
+                position: absolute;
             }
         }
     }

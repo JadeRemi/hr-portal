@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import imgIconClip from "../../assets/images/icon-clip.svg";
 import imgIconChevron from "../../assets/images/icon-chevron.svg";
+import contactApi from "../functions/api";
 
 interface Model {
     data: {
@@ -25,6 +26,18 @@ export function Testing({ data, openModal }: Model) {
     const [selectedValue, setSelectedValue] = useState("");
     const [userphone, setUserphone] = useState("");
     const [cvs, setCvs] = useState([...initialCvs]);
+    const [form, setForm] = useState({});
+
+    const collectTesting = () => {
+        contactApi({"Context": "Testing", ...form});
+    }
+
+    const patchForm = (param: string, value: string) => {
+        setForm(form => {
+            let result:any = Object.assign({...form}, {[`${param}`]: value});
+            return result;
+          })
+    }
 
 // dropdown //
     useEffect(() => {
@@ -82,10 +95,10 @@ export function Testing({ data, openModal }: Model) {
                         <p className="desc-label">{data.Description}</p>
                         <p className="testing-text">{data.Text}</p>
                         <label htmlFor="inputEmailTest" className="testing-email">{data.InputEmailLabel}<span>*</span></label>
-                        <input placeholder={data.InputEmailPlaceholder} id="inputEmailTest" type="text" />
+                        <input placeholder={data.InputEmailPlaceholder} id="inputEmailTest" type="text" onChange={(e)=>patchForm("Email", e.target.value)}/>
                     </div>
                     <div className="button-block">
-                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Sent"); setStyle(1)}}><p>{data.Button}</p></button>
+                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Sent"); setStyle(1); collectTesting()}}><p>{data.Button}</p></button>
                         <label className="desc-label">{data.ButtonLabel}</label>
                     </div>
                 </div>
@@ -104,20 +117,20 @@ export function Testing({ data, openModal }: Model) {
                             <form>
                                 <div className="testing-form-item">
                                     <label className="testing-input">{data.InputGreetingLabel}<span>*</span></label>
-                                    <input placeholder={data.InputGreetingPlaceholder} id="inputEmailName" type="text" />
+                                    <input placeholder={data.InputGreetingPlaceholder} id="inputEmailName" type="text" onChange={(e)=>patchForm("Name", e.target.value)}/>
                                 </div>
                                 <div className="testing-form-item testing-form-email">
                                     <label className="testing-input">{data.InputEmailLabel}<span>*</span></label>
-                                    <input placeholder={data.InputEmailPlaceholder} id="inputEmailTest" type="text" />
+                                    <input placeholder={data.InputEmailPlaceholder} id="inputEmailTest" type="text" onChange={(e)=>patchForm("Email", e.target.value)}/>
                                 </div>
                                 <div className="testing-form-item testing-form-phone">
                                     <label className="testing-input">{data.InputPhoneLabel}<span>*</span></label>
-                                    <input placeholder={data.InputPhonePlaceholder} id="inputEmailPhone" type="text" value={userphone} onChange={changephone} />
+                                    <input placeholder={data.InputPhonePlaceholder} id="inputEmailPhone" type="text" value={userphone} onChange={(e) => {changephone(e); patchForm("Phone", e.target.value)}} />
                                 </div>
                                 <div className="testing-form-item testing-form-cv">
                                     <label className="testing-input">{data.InputCvLabel}<span>*</span></label>
                                     <div className="dropdown-container">
-                                        <input name="select_value" type="hidden" id="selectedValue" value={selectedValue} />
+                                        <input name="select_value" type="hidden" id="selectedValue" value={selectedValue} onChange={(e)=>patchForm("Cv", e.target.value)}/>
                                         <div className="display-value" id="displayValue" onClick={toggleOptions}>
                                             <p className="value-text" id="valueText">{dropoption?dropoption:data.InputCvPlaceholder}</p>
                                             <img className="footer-logo" src={imgIconChevron} alt="arrow" />
@@ -140,7 +153,7 @@ export function Testing({ data, openModal }: Model) {
                         </div>
                     </div>
                     <div className="button-block">
-                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Wait"); setStyle(0)}}><p>{data.ButtonPost}</p></button>
+                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Wait"); setStyle(0); collectTesting()}}><p>{data.ButtonPost}</p></button>
                         <label className="desc-label desc-label-wide">{data.ButtonLabelPost}</label>
                     </div>
                 </div>

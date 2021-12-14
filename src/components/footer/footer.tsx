@@ -6,7 +6,7 @@ import imgLogoTwitter from "../../assets/images/logo-twitter.svg";
 import imgLogoFacebook from "../../assets/images/logo-facebook.svg";
 import imgLogoYoutube from "../../assets/images/logo-youtube.svg";
 import imgIconArrow from "../../assets/images/icon-arrow.svg";
-
+import contactApi from "../functions/api";
 
 
 interface Model {
@@ -22,7 +22,11 @@ interface Model {
 export function Footer({ data }: Model) {
     
     const [checked, setChecked] = useState(false);
+    const [phone, setPhone] = useState("");
     
+    const collectFooter = () => {
+        contactApi({"Context": "Footer", "Phone Number": phone});
+    }
 
     return (
         <div className="footer">
@@ -43,9 +47,9 @@ export function Footer({ data }: Model) {
                     <h3>{data.CallMe}</h3>
                     <form className="footer-form">
                         <div className="input-icons">
-                            <img src={imgIconArrow} alt="arrow" />
+                            <img src={imgIconArrow} alt="arrow" onClick={()=>collectFooter()}/>
                         </div>
-                        <input className="footer-input" type="text" placeholder="+7(___)___-__-__" />
+                        <input className="footer-input" type="text" placeholder="+7(___)___-__-__" onChange={(e)=>setPhone(e.target.value)}/>
                         <div>
                             <label className="checkcontainer">
                                 <input type="checkbox" checked={checked} 
