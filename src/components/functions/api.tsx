@@ -6,7 +6,7 @@ interface Model {
 }
 
 export default function contactApi (data: Model) {
-    //console.log(data);
+    console.log(data);
     axios
         .post("https://jsonplaceholder.typicode.com/posts", {})
         .then(response => {

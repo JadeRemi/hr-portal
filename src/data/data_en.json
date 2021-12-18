@@ -1,0 +1,146 @@
+[{
+    "Header": {
+      "Title": "About company",
+      "Heading": "Digital Finance International FINSTAR FINANCIAL GROUP"
+    },
+    "Main": {
+      "Title": "Main page"
+    },
+    "Footer": {
+      "Title": "Feedback",
+      "Contacts": "CONTACTS",
+      "Rights1": "© 2021 IT Expert Company",
+      "Rights2": "All rights reserved",
+      "Address": "012345 Russia, Moscow, Dmitrovskoe highway 9, building 3",
+      "Phone1": "+7 (987) 654-32-10",
+      "Phone2": "+7 (987) 654-32-10",
+      "Mail": "info@itexpert@mail.ru",
+      "CallMe": "CALL ME BACK",
+      "Accept": "I agree to the processing of",
+      "PersonalData": "personal data"
+    },
+    "Announce": {
+      "Title": "Announce",
+      "Name": "IT-EXPERT COMPANY",
+      "Heading": " is an ambitious and friendly IT team .",
+      "Paragraph1": "We are the IT center of Digital Finance International FINSTAR FINANCIAL GROUP and create solutions for the implementation, transformation and strategic development of automated information systems and software systems for international projects in the financial services market.",
+      "Paragraph2": "Investment geography includes more than 30 countries of the world, including the countries of the CIS, Europe and Asia.",
+      "BannerHeading": "Join",
+      "BannerText": "our team already tomorrow!",
+      "BannerButton": "LOOKING FOR",
+      "Column1Title": "Taking care of our employees",
+      "Column1Text": "In the office or remotely - work wherever you like. Flexible hours for the optimal balance of work and personal life.",
+      "Column2Title": "We provide an opportunity to do what you like!",
+      "Column2Text": "Huge selection of directions, stacks and tasks. The ability to really influence the processes in the company.",
+      "Column3Title": "We use proven technologies",
+      "Column3Text": "and approaches to development, while following the advanced IT trends.",
+      "Column4Title": "It will not be boring! Working in a professional team.",
+      "Column4Text": "Unlimited opportunities for professional growth, interesting projects and non-standard technical tasks."
+    },
+    "Vacancies": {
+      "Title": "Vacancies",
+      "Heading": "Open vacancies",
+      "Positions": {
+        "System-Analyst": "System analysts",
+        "C-dev": "Developers С# .NET",
+        "Sql-dev": "Developers MS SQL",
+        "DataAnalyst": "Data Analyst"
+      },
+      "Join": "Join our team tomorrow!",
+      "Plan": "How will we proceed:",
+      "Step1": "Check open vacancies and find out what we expect from you.",
+      "Step2": "Pass the technical screening at the beginning and we will definitely have something to talk about.",
+      "Step3": "Choose a time when it will be convenient for you to have an interview!",
+      "Question": "Got questions?",
+      "Answer": "We will be happy to answer",
+      "Button": "Ask a question"
+    },
+    "Position": {
+      "Title": "Position",
+      "Heading": "Developers С# .NET",
+      "IncomeLabel": "Income level:",
+      "IncomeText": "100 000 ₽",
+      "ExperienceLabel": "Required work experience:",
+      "ExperienceText": "1-3 years",
+      "ScheduleLabel": "Employment type, work schedule:",
+      "ScheduleText": "complete, remotely",
+      "TaskLabel": "Main tasks:",
+      "TaskList": "analysis of requirements for a software product; development of a concept for the implementation of requirements; software design and development; support of working solutions; performance analysis, optimization and acceleration of query processing; adaptation of software for Russian and foreign divisions of the company; exploring new technologies and strategies that will improve our services.",
+      "ExpectationsLabel": "We are waiting from the candidate:",
+      "ExpectationsList": "higher specialized education; confident knowledge of C # .NET (ASP.NET MVC / ASP.NET Core, WebAPI); basic HTML, CSS skills; basic JavaScript, JQuery skills; basic skills in Transact-SQL, EntiryFramework; readiness to master new tools and technologies; readiness to understand someone else's code and system structure.",
+      "SpecialsLabel": "The plus will be:",
+      "SpecialsList": "knowledge of Angular; advanced knowledge of Transact-SQL; knowledge of SOAP / REST, experience in developing services; knowledge of Visual Basic / VBScript.",
+      "BannerLabel": "Waiting for you:",
+      "BannerList": "interesting tasks and invaluable experience; official employment and social guarantees; participation in large-scale and unique projects; competitive salary and the ability to scale it depending on the business tasks performed; office work or remote work; a real opportunity for career and professional growth.",
+      "Button": "GO TO TECHNICAL SCREENING",
+      "ButtonLabel": "a short test task will help us understand what level of training you have"
+    
+    },
+    "Testing": {
+      "Title": "Test task",
+      "Heading": "Test task for С# .NET developers",
+      "Description": "Task description:",
+      "Text": "Here is a vivid example of modern trends - the economic agenda of today, in its classical view, allows the introduction of profound reasoning. The preliminary conclusions are disappointing: the constant quantitative growth and the scope of our activity provides a wide range of (specialists) participation in the formation of standard approaches. And also the elements of the political process are combined into whole clusters of their own kind. Ideological considerations of a higher order, as well as the introduction of modern methods, directly depend on the primary requirements. The shareholders of the largest companies cover extremely interesting features of the picture as a whole, but the specific conclusions, of course, are considered solely in the context of marketing and financial prerequisites. In our quest to improve the user experience, we miss that the elements of the political process are nothing more than the quintessential victory of marketing over reason and must be held accountable. Interactive prototypes highlight extremely interesting features of the whole picture, but specific findings are, of course, indicated as contenders for the role of key factors. Likewise, the existing theory creates the prerequisites for the analysis of existing patterns of behavior.",
+      "InputEmailLabel": "Email",
+      "InputEmailPlaceholder": "Email",
+      "Button": "GET A TEST PROBLEM",
+      "ButtonLabel": "we will send the terms of reference and the feedback form to the specified email",
+      "ButtonPost": "SEND",
+      "ButtonLabelPost": "We need a little time to familiarize ourselves with your resume and test assignment. We will send you a link to choose the day of the interview to your email address.",
+      "ButtonUpload": "ADD",
+      "InputGreetingLabel": "Please introduce yourself",
+      "InputGreetingPlaceholder": "Surname, name and patronymic",
+      "InputPhoneLabel": "Contact phone",
+      "InputPhonePlaceholder": "+7 (000) 000-00-00",
+      "InputCvLabel": "Resume",
+      "InputCvPlaceholder": "Choose"
+    },
+    "Schedule": {
+      "Title": "Schedule",
+      "Heading": "We are glad that we can get to know you a little better.",
+      "Button": "MAKE APPOINTMENT",
+      "InputNameLabel": "Please introduce yourself",
+      "InputNamePlaceholder": "Surname, name and patronymic",
+      "InputMessengersLabel": "Your login in",
+      "InputSkypePlaceholder": "Skype",
+      "InputZoomPlaceholder": "Zoom",
+      "InputOthersLabel": "Indicate another way of communication convenient for you:",
+      "InputOthersPlaceholder": "Another method",
+      "SelectDay": "Choose the day:",
+      "SelectTime": "Choose the time:",
+      "SelectPersonal": "Suggest your time:",
+      "From": "from",
+      "Until": "to"
+    },
+    "Modal": {
+      "Title": "Dialogue"
+    },
+    "Feedback": {
+      "Title": "Feedback",
+      "Heading": "Ask your question",
+      "NameLabel": "Please introduce yourself",
+      "NamePlaceholder": "Surname, name and patronymic",
+      "EmailLabel": "Email to get an answer",
+      "EmailPlaceholder": "Email",
+      "QuestionLabel": "Your question",
+      "QuestionPlaceholder": "Ask your question",
+      "Button": "ASK A QUESTION",
+      "ButtonLabel": " - fields are required"
+    },
+    "Sent": {
+      "Title": "Sent",
+      "Heading": "Job sent",
+      "Paragraph1": "A full description of the technical task and a link to the feedback form have been sent to the specified email."
+    },
+    "Wait": {
+      "Title": "Waiting",
+      "Heading": "We need a little time",
+      "Paragraph1": "to read your resume / test assignment.",
+      "Paragraph2": "After consideration, a link will be sent to the specified email to select the day of the interview."
+    },
+    "Languages": {
+      "EN": 1,
+      "RU": 2,
+      "DE": 3
+    }
+  }]

@@ -2,6 +2,7 @@ import { Feedback } from "../screens/feedback";
 import { Sent } from "../screens/sent";
 import { Wait } from "../screens/wait";
 
+import imgIconClose from "../../assets/images/icon-close.svg";
 import PropTypes from "prop-types"; 
 import ReactDOM, { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
@@ -60,21 +61,10 @@ function ModalType({data, label, onClose}: selectModal) {
    
     return (
       <div className="modal-display" onClick={handleClickStop}>
+          <div className="modal-exit">
+              <img src={imgIconClose} onClick={(()=>onClose(""))}/>
+            </div>
           {chooseModal([label, data, onClose])}
       </div>
     );
   }
-
-
-
-
-//export const Modal: React.FC<Component> = data => {
-//
-//    return (
-//        <div className="modal-back">
-//            <Feedback data={data[0]} />
-//            <Sent data={data[1]} />
-//            <Wait data={data[2]} />
-//        </div>
-//    );
-//};

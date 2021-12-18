@@ -7,10 +7,11 @@ interface Model {
     data: {
         [key: string]: string;
     },
-    openModal: any;
+    openModal: any,
+    switchpage: any;
 }
 
-export function Testing({ data, openModal }: Model) {
+export function Testing({ data, openModal, switchpage }: Model) {
 
     const initialCvs = [
         {id: "Frontend", name: "Фронтенд"},
@@ -28,8 +29,21 @@ export function Testing({ data, openModal }: Model) {
     const [cvs, setCvs] = useState([...initialCvs]);
     const [form, setForm] = useState({});
 
-    const collectTesting = () => {
-        contactApi({"Context": "Testing", ...form});
+    const collectTestingOne = () => {
+        if ("Email" in form) {
+            contactApi({"Context": "Testing", ...form});
+            openModal("Sent");
+            setStyle(1); 
+        }
+    }
+    const collectTestingTwo = () => {
+        if ("Name" in form && "Email" in form && "Phone" in form) {
+            contactApi({"Context": "Testing", ...form});
+            openModal("Wait");
+            setStyle(0);
+            switchpage("Schedule");
+        }
+
     }
 
     const patchForm = (param: string, value: string) => {
@@ -98,7 +112,7 @@ export function Testing({ data, openModal }: Model) {
                         <input placeholder={data.InputEmailPlaceholder} id="inputEmailTest" type="text" onChange={(e)=>patchForm("Email", e.target.value)}/>
                     </div>
                     <div className="button-block">
-                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Sent"); setStyle(1); collectTesting()}}><p>{data.Button}</p></button>
+                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{collectTestingOne()}}><p>{data.Button}</p></button>
                         <label className="desc-label">{data.ButtonLabel}</label>
                     </div>
                 </div>
@@ -153,7 +167,7 @@ export function Testing({ data, openModal }: Model) {
                         </div>
                     </div>
                     <div className="button-block">
-                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{openModal("Wait"); setStyle(0); collectTesting()}}><p>{data.ButtonPost}</p></button>
+                        <button className="button-blue" id="buttonConfirmTest"  onClick={()=>{collectTestingTwo();}}><p>{data.ButtonPost}</p></button>
                         <label className="desc-label desc-label-wide">{data.ButtonLabelPost}</label>
                     </div>
                 </div>

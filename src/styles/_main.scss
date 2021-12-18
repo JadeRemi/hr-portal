@@ -481,6 +481,7 @@ body {
             padding-bottom: 20px;
             @extend %typo-mons-h-16;
             color: $color-white;
+            cursor: pointer;
             &::before {
                 content: "•";
                 padding-right: 8px;
@@ -488,6 +489,12 @@ body {
                 position: absolute;
                 left: 20px;
               }
+            &:hover{
+                color: $color-gray-4;
+                &::before {
+                    color: $color-gray-4;
+                }
+            }
         }
     }
     &-plan{
@@ -546,6 +553,7 @@ body {
                 margin: 0;
                 @extend %typo-mons-h-20;
                 color: $color-blue-2;
+                text-align: left;
             }
             p{
                 margin: 0;
@@ -569,6 +577,19 @@ body {
         justify-content: center;
         align-items: center;
     }
+    &-exit{
+        position: relative;
+        height: 0;
+        img{
+            position: absolute;
+            right: 52px;
+            top: 52px;
+            &:hover{
+                @extend %svg-to-gray-1;
+            }
+        }
+
+    }
     &-display{
         width: 760px;
         background-color: $color-white;
@@ -576,7 +597,6 @@ body {
         h1{
             @extend %typo-mons-h-24;
             color: $color-blue-2;
-            //padding: 52px 0 0 52px;
             margin: 52px 0 24px 52px;
         }
         label{

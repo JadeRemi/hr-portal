@@ -14,9 +14,16 @@ type Model = {
 
 
 export function Main({ data }: Model) {
+    const pageList = ["Announce", "Vacancies", "Position", "Testing", "Schedule"]
+
     const [pageData, setPageData] = useState(data);
+    const [page, setPage] = useState(pageList[0]);
 
     const [show, setShow] = useState("");
+
+    const switchPage = (nextpage: string) => {
+        if (pageList.includes(nextpage)) setPage(nextpage);
+    }
 
     const showModal = (modalName: string) => {
         if (modalName.length > 0) {
@@ -30,15 +37,18 @@ export function Main({ data }: Model) {
         setShow("");
     };
 
+    useEffect(() => {
+        setPageData(data);
+      }, [data]);
+
     return (
         <div className="main">
-            <Announce data={pageData.Announce}/>
-            <Vacancies data={pageData.Vacancies} openModal={showModal}/>
-            <Position data={pageData.Position}/>
-            <Testing data={pageData.Testing} openModal={showModal}/>
-            <Schedule data={pageData.Schedule}/>
+            {page=="Announce" && <Announce data={pageData.Announce} switchpage={switchPage} />}
+            {page=="Vacancies" && <Vacancies data={pageData.Vacancies} openModal={showModal} switchpage={switchPage} />}
+            {page=="Position" && <Position data={pageData.Position} switchpage={switchPage} />}
+            {page=="Testing" && <Testing data={pageData.Testing} openModal={showModal} switchpage={switchPage} />}
+            {page=="Schedule" && <Schedule data={pageData.Schedule} switchpage={switchPage} />}
             <Modal data={{Feedback: pageData.Feedback, Sent: pageData.Sent, Wait: pageData.Wait}} show={show} onClose={showModal}/>
         </div>
     );
-    //data={[pageData.Feedback, pageData.Sent, pageData.Wait]}
 };

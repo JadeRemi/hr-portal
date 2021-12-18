@@ -6,16 +6,20 @@ import contactApi from "../functions/api";
 interface Model {
     data: {
         [key: string]: string;
-    };
+    },
+    switchpage: any;
 }
 
-export function Schedule({ data }: Model) {
+export function Schedule({ data, switchpage }: Model) {
 
     const timeSlots = [10, 12, 14, 16];
     const [form, setForm] = useState({});
 
     const collectSchedule = () => {
-        contactApi({"Context": "Schedule", ...form});
+        if ("Name" in form && "Time" in form) {
+            contactApi({"Context": "Schedule", ...form});
+            switchpage("Announce"); 
+        }
     }
 
     const patchForm = (param: string, value: string) => {
@@ -77,7 +81,7 @@ export function Schedule({ data }: Model) {
                     </div>
                 </div>
                 <div className="button-block">
-				    <button className="button-blue" id="buttonConfirmDate" onClick={()=>collectSchedule()}><p>{data.Button}</p></button>
+				    <button className="button-blue" id="buttonConfirmDate" onClick={()=>{collectSchedule()}}><p>{data.Button}</p></button>
                 </div>
             </div>
         </div>

@@ -8,10 +8,11 @@ import imgIconSmile from "../../assets/images/icon-smile.svg";
 interface Model {
     data: {
         [key: string]: string;
-    };
+    },
+    switchpage: any;
 }
 
-export function Announce({ data }: Model) {
+export function Announce({ data, switchpage }: Model) {
     return (
         <div className="main-page announce">
             <div className="presentation">
@@ -27,7 +28,7 @@ export function Announce({ data }: Model) {
                     <img src={imgHandshake} alt="handshake" />
                     <h1>{data.BannerHeading}</h1>
                     <p className="banner-text">{data.BannerText}</p>
-                    <button className="button-blue" id="buttonConfirmAnnounce"><p>{data.BannerButton}</p></button>
+                    <button className="button-blue" id="buttonConfirmAnnounce" onClick={()=>switchpage("Vacancies")}><p>{data.BannerButton}</p></button>
                 </div>
             </div>
 

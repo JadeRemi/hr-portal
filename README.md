@@ -22,3 +22,5 @@
 
 Локализация доступна в /data/data.json.
 Вызов API выполняется в /components/functions/api.
+
+При возникновении при первом запуске ошибки "CSS error, found orphan CR, try removeCR option" следует переключить режим с CRLF на LF в своей IDE.

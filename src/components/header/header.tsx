@@ -3,19 +3,20 @@ import imgLogoBlack from "../../assets/images/itexpert-logo-black.svg";
 import imgIconArrow from "../../assets/images/icon-arrow.svg";
 
 interface Model{
-    data: {
-        [key: string]: any;
-    }[]
+    language: any;
+    data: any;
+    langs: string[];
 }
 
-export function Header({ data }: Model) {
-    const languages: string[] = Object.keys(data[1]);
-    const [lang, setLang] = useState(0);
+export function Header({ data, langs, language }: Model) {
+    const languages: string[] = [...langs];
+    const [lang, setLang] = useState(languages[1]);
 
     function switchLang(event: MouseEvent) {
-        let iteration: number = lang+1;
+        let iteration: number = languages.indexOf(lang)+1 | 0;
         if (iteration >= languages.length) {iteration = 0}
-        setLang(iteration);
+        setLang(languages[iteration]);
+        language(lang);
     }
 
     return (
@@ -23,10 +24,10 @@ export function Header({ data }: Model) {
             <div className="header-wrapper">
                 <div className="logotype">
                     <img src={imgLogoBlack} alt="logo" />
-                    <h3>{data[0].Heading}</h3>
+                    <h3>{data.Heading}</h3>
                 </div>
                 <div className="language" onClick={switchLang}>
-                    <p>{languages[lang]}</p>
+                    <p>{lang}</p>
                     <img src={imgIconArrow} alt="arrow" />
                 </div>
             </div>

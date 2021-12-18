@@ -4,10 +4,11 @@ import imgVacanciesHand from "../../assets/images/vacancies-hand.svg";
 interface Model {
     data: {
         [key: string]: string;
-    };
+    },
+    switchpage: any;
 }
 
-export function Position({ data }: Model) {
+export function Position({ data, switchpage }: Model) {
 
     function listItems (text: string) {
         return text.split('; ').map((item:string, index:number, array: string[]) => <li key={index}>{item}{(index < array.length-1)?";":""}</li>);
@@ -60,7 +61,7 @@ export function Position({ data }: Model) {
                 </div>
             </div>
             <div className="button-block">
-                <button className="button-blue" id="buttonConfirmScreening"><p>{data.Button}</p></button>
+                <button className="button-blue" id="buttonConfirmScreening" onClick={()=>switchpage("Testing")}><p>{data.Button}</p></button>
                 <label className="desc-label">{data.ButtonLabel}</label>
             </div>
         </div>

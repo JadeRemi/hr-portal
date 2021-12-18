@@ -15,9 +15,6 @@ interface Model {
     };
 }
 
-//<FontAwesomeIcon icon={faTwitter} />
-//<FontAwesomeIcon icon={faFacebookSquare} />
-//<FontAwesomeIcon icon={faYoutube} />
 
 export function Footer({ data }: Model) {
     
@@ -25,7 +22,8 @@ export function Footer({ data }: Model) {
     const [phone, setPhone] = useState("");
     
     const collectFooter = () => {
-        contactApi({"Context": "Footer", "Phone Number": phone});
+        if (!!phone)
+            contactApi({"Context": "Footer", "Phone Number": phone});
     }
 
     return (

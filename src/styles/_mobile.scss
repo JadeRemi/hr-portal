@@ -347,6 +347,11 @@
     }
 }
 
+@media (max-width: 840px){
+    .pros-wrapper{
+        justify-content: center !important;
+    }
+}
 @media (max-width: 768px){
     .modal-display{
         width: calc(100% - 68px);

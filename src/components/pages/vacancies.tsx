@@ -7,12 +7,13 @@ interface Model {
     data: {
         [key: string]: any;
     },
-    openModal: any;
+    openModal: any,
+    switchpage: any;
 }
 
-export function Vacancies({ data, openModal }: Model) {
+export function Vacancies({ data, openModal, switchpage}: Model) {
     function listItems (text: object) {
-        return Object.values(text).map((item:string, index:number) => <li key={index}>{item}</li>);
+        return Object.values(text).map((item:string, index:number) => <li key={index} onClick={()=>switchpage("Position")}>{item}</li>);
     }
 
     return (
