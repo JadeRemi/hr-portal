@@ -1,5 +1,6 @@
 # IT EXPERT HR PORTAL
 Мок-ап: [https://www.figma.com/file/3LRo26WXvpV9NckCrqdPE5/IT-Expert-HR](https://www.figma.com/file/3LRo26WXvpV9NckCrqdPE5/IT-Expert-HR)
+Превью: [https://jaderemi.github.io/hr-portal/](https://jaderemi.github.io/hr-portal/)
 
 ## Команды сборки
 ### `npm i`
